@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head> <title>Google Homepage</title> </head>
-<body>
-<div>
-    <ul>
-        About
-        Store
-    </ul>
-</div>
-<div>
-    Gmail
-    Images
-    <img>
-    <button type="button">Sign In</button>
-</div>
-<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+<style>
+    #toprow {
+        display:flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        
+    }
+    ul {
+        display:flex;
+        flex-direction: row;
+    }
+    li {
+        list-style-type: none;
+        display: block;
+        padding: 5px;
+        margin: 0px;
+    }
+    
 
-<h1>
-<form>
+    #googlelogo {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #searchbar {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+</style>
+
+<body>
+    
+<div id="toprow">
+    <ul>
+        <li> About </li>
+        <li> Store</li>
+        <li style="float:right"> Gmail</li>
+        <li style="float:right"> Images</li>
+        <li style="float:right"> <img></li>
+        <li style="float:right"> <button type="button">Sign In</button></li>
+    </ul>
+    
+    
+</div>
+
+<img id = "googlelogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+
+<h1 id = "searchbar">
+<form >
     <input type="text" id=Searchbar name=Searchbar>
 </form>
 </h1>
