@@ -1,81 +1,145 @@
 <!DOCTYPE html>
 <html>
-<head> <title>Google Homepage</title> </head>
+<head> <title>Google</title> </head>
 <style>
+    html {
+        font-size: 14px;
+        margin: 0%;
+    }
+
     #toprow {
         display:flex;
         flex-direction: row;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        
+        font-family: Arial, Helvetica, sans-serif
+            }
+
+
+
+    #topbar {
+        display: grid;
+        grid-template-columns: 75px 1450px 75px 75px 75px 75px;
     }
-    ul {
-        display:flex;
-        flex-direction: row;
-    }
+    
+    
     li {
         list-style-type: none;
         display: block;
         padding: 5px;
         margin: 0px;
     }
+    #menu {
+        height: 45px;
+        width: 45px;
+        transform: translateY(-15px);
+    }
+    #logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    #searchbarcontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        transform: translateY(16px);
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    form {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 700px;
+        height: 16px;
+    }
+    input {
+        width: 700px;
+        height: 16px;
+    }
+    #canhoz {
+        display: flex;
+        justify-items: flex-start;
+        align-items: center;
+        width: auto;
+        height: 40px;
+        background-color:#f2f2f2;
+        border-bottom: gray;
+        border-top: gray;
+        font-family: Arial, Helvetica, sans-serif;
+        transform: translateY(570px);
+        
+    }
+    #lowerbar {
+        display: flex;
+        justify-items: flex-start;
+        align-items: center;
+        width: auto;
+        height: 40px;
+        background-color:#f2f2f2;
+        border-top: gray;
+        border-bottom: gray;
+        font-family: Arial, Helvetica, sans-serif;
+        border-color: gray;
+        transform: translateY(570px);
+        padding-left: 0%;
+
+    }
+    #botbar {
+        display: grid;
+        grid-template-columns: 75px 75px 1450px 75px 75px 75px;
+
+    }
     
-
-    #googlelogo {
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #searchbar {
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    
 
 </style>
 
 <body>
     
 <div id="toprow">
-    <ul>
-        <li> About </li>
-        <li> Store</li>
-        <li style="float:right"> Gmail</li>
-        <li style="float:right"> Images</li>
-        <li style="float:right"> <img></li>
-        <li style="float:right"> <button type="button">Sign In</button></li>
+    <ul id= topbar>
+        <a href="#">About</a> 
+        <a href="#">Store</a>
+        <a href="#">Gmail</a>
+        <a href="#">Images</a>
+        <a href="#"><img id="menu" src="menu.png"></a>
+        <a href="#" id ="navbutton"> <button type="button" >Sign In</button></a>
     </ul>
     
     
 </div>
 
-<img id = "googlelogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+<img id="logo"  src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
 
-<h1 id = "searchbar">
-<form >
-    <input type="text" id=Searchbar name=Searchbar>
-</form>
-</h1>
-<button type="submit">Google Search</button>
-<button type="button">I'm Feeling Lucky</button>
-<div>Google offered in: Francais</div>
 
-<div>Canada</div>
+    <form >
+        <input type="text" placeholder="Search" name="searchbar">
+    </form>
+    
 
-<div>
-    <ul>
-        Advertising
-        Business
-        How Search works
-        Privacy
-        Terms
-        Settings
-    </ul>
+<div id="searchbarcontainer">
+<div id="searchbutton"><button>Google Search</button></div> 
+<div id="feelinglucky"><button>I'm Feeling Lucky</button></div>
 </div>
 
 
+<div id="canhoz">
+    <a href="#" style="transform: translateX(40px);">Canada</a>
+</div>
+
+<div id="lowerbar">
+    <ul id="botbar">
+        <a href="#">Advertising</a> 
+        <a href="#">Business</a>
+        <a href="#">How Search Works</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Settings</a>
+    </ul>
+</div>
 </body>
 
 </html>
